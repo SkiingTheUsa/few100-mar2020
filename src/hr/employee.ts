@@ -1,8 +1,8 @@
 export class Employee {
 
-    constructor(private salary: number,
-        public firstName: string,
-        public lastName: string) { }
+    constructor(private salary: number = 50_000,
+        public firstName?: string,
+        public lastName?: string) { }
 
     getSalary() {
         return this.salary;
@@ -11,4 +11,5 @@ export class Employee {
     get fullName(): string {
         return `${this.lastName}, ${this.firstName}`;
     }
+
 }
